@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    card_view:cardCornerRadius="8dp"
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="end"
+        android:orientation="vertical"
+        android:background="@drawable/gradiant_background">
+        <ImageView
+            android:id="@+id/item_page_img"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/nav_menu_header"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="2dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_toLeftOf="@id/item_page_img"
+            android:padding="5dp">
+            <TextView
+                android:id="@+id/item_page_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ماهو التدريب المهني"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+            <TextView
+                android:id="@+id/item_page_summary_article"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="هو تدريب مهني لجميع المهن لدراستها وفهمها، مع وجود أكثر من 350 مهنة مختلفة يمكن الإنضمام للتدريب المهني لتعلمها. "
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:justificationMode="inter_word"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/item_page_more_btn"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                card_view:icon="@drawable/arrow_left"
+                android:text="المزيد"
+                android:textColor="@color/white"
+                card_view:iconGravity="textStart"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="left"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

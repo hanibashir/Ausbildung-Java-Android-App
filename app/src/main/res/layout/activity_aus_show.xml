@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:gravity="center"
+    tools:context=".activities.show.ShowAusActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="100dp"
+            app:contentScrim="@color/colorPrimary"
+            app:expandedTitleMarginEnd="64dp"
+            app:layout_scrollFlags="exitUntilCollapsed|scroll"
+            app:title="Ausbildung Title">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/aus_info_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="pin"/>
+
+            <ImageView
+                android:id="@+id/aus_details_thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bankkaufmann" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/aus_show_adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:adSize="BANNER"
+            app:adUnitId="@string/admob_banner_id"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <!-- aus info table-->
+                    <TableLayout
+                        android:id="@+id/aus_info_table_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layoutDirection="rtl"
+                        android:textDirection="rtl"
+                        android:stretchColumns="*"
+                        android:divider="?android:attr/dividerHorizontal"
+                        android:showDividers="middle"
+                        android:layout_margin="8dp"
+                        android:padding="8dp">
+
+                        <!-- aus german title row-->
+                        <TableRow
+                            android:background="@drawable/table_layout_gradiant_background"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="عنوان المهنة: "
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/aus_details_title"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Bankkaufmann"
+                                android:textDirection="ltr"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:textAppearance="?android:textAppearanceLarge"/>
+                        </TableRow>
+
+
+                        <!-- aus certificate row-->
+                        <TableRow
+                            android:background="@drawable/table_layout_gradiant_background"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="الشهادة المطلوبة:"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/aus_details_certificate"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="شهادة التاسع"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold"/>
+                        </TableRow>
+
+                        <!-- aus duration row-->
+                        <TableRow
+                            android:background="@drawable/table_layout_gradiant_background"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="مدة التدريب:"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/aus_details_duration"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="ثلاث سنوات ونصف"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold"/>
+                        </TableRow>
+
+
+                        <TableRow
+                            android:id="@+id/main_salary_row"
+                            android:layout_margin="8dp"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="الراتب / شهرياً:"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="20sp"
+                                android:textStyle="bold"/>
+
+                        </TableRow>
+
+                        <!-- aus salary1 row-->
+                        <TableRow
+                            android:id="@+id/salary1_row"
+                            android:background="@color/colorPrimary"
+                            android:padding="15dp"
+                            android:divider="?android:attr/dividerVertical"
+                            android:showDividers="middle">
+
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="السنة الأولى"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:layout_marginRight="5dp"/>
+
+                            <TextView
+                                android:id="@+id/aus_details_salary1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="€750"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:layout_marginRight="5dp"/>
+
+                        </TableRow>
+
+
+                        <!-- aus salary2 row-->
+                        <TableRow
+                            android:id="@+id/salary2_row"
+                            android:background="@color/colorPrimary"
+                            android:padding="15dp"
+                            android:divider="?android:attr/dividerVertical"
+                            android:showDividers="middle">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="السنة الثانية"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:layout_marginRight="5dp"/>
+
+
+                            <TextView
+                                android:id="@+id/aus_details_salary2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="€1000"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:layout_marginRight="5dp"/>
+                        </TableRow>
+
+                        <!-- aus salary3 row-->
+                        <TableRow
+                            android:id="@+id/salary3_row"
+                            android:background="@color/colorPrimary"
+                            android:padding="15dp"
+                            android:divider="?android:attr/dividerHorizontal"
+                            android:showDividers="middle">
+
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="السنة الثالثة"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:layout_marginRight="5dp"/>
+
+                            <TextView
+                                android:id="@+id/aus_details_salary3"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="€1250"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:layout_marginRight="5dp"/>
+
+
+                        </TableRow>
+
+
+                        <!-- aus salary4 row-->
+                        <TableRow
+                            android:id="@+id/salary4_row"
+                            android:background="@color/colorPrimary"
+                            android:padding="15dp"
+                            android:divider="?android:attr/dividerHorizontal"
+                            android:showDividers="middle">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="السنة الرابعة"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:layout_marginRight="5dp"/>
+
+                            <TextView
+                                android:id="@+id/aus_details_salary4"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="€1500"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:layout_marginRight="5dp"/>
+                        </TableRow>
+
+                    </TableLayout>
+
+                    <TextView
+                        android:id="@+id/aus_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/aus_info_table_container"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="تفاصيل المهنة"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/devider"
+                        android:layout_width="150dp"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/aus_detail"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/colorPrimary" />
+
+
+                    <WebView
+                        android:id="@+id/aus_details_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/devider"
+                        android:layout_margin="10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/aus_details_description"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:text="للمزيد من المعلومات أو للتقديم لهذا التدريب إضغط الرابط التالي:"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/links_btns"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="me.hani.ausbildung">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+
+
+        <!-- Splash Activity -->
+        <activity
+            android:name="me.hani.ausbildung.activities.SplashActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <!-- Pages List Activity -->
+        <activity android:name="me.hani.ausbildung.activities.lists.PagesListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:parentActivityName="me.hani.ausbildung.activities.MainActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- Show Page Activity -->
+        <activity android:name="me.hani.ausbildung.activities.show.ShowPageActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:parentActivityName="me.hani.ausbildung.activities.lists.PagesListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!-- Categories List Activity -->
+        <activity
+            android:name="me.hani.ausbildung.activities.lists.CategoriesListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:parentActivityName="me.hani.ausbildung.activities.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- Auses List Activity -->
+        <activity
+            android:name="me.hani.ausbildung.activities.lists.AusesListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:parentActivityName="me.hani.ausbildung.activities.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- Show Aus Activity -->
+        <activity
+            android:name="me.hani.ausbildung.activities.show.ShowAusActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:parentActivityName="me.hani.ausbildung.activities.lists.AusesListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- Main Activity -->
+        <activity
+            android:name="me.hani.ausbildung.activities.MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- admob -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id" />
+        <!-- //admob -->
+    </application>
+
+    <!-- permissions -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+</manifest>

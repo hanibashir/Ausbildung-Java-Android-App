@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Ausbildung - التدريب المهني ألمانيا</string>
+
+    <!-- Main Menu -->
+    <string name="nav_home_item">الرئيسية</string>
+    <string name="nav_all_aus_item">كل المهن</string>
+    <string name="nav_cats_item">التصنيفات</string>
+    <string name="nav_general_info">معلومات عامة</string>
+    <string name="nav_communicate_item">تواصل</string>
+    <string name="nav_rate_item">قيم التطبيق</string>
+    <string name="nav_share_item">شارك التطبيق</string>
+    <string name="nav_about_item">عن التطبيق</string>
+    <string name="share_msg">تطبيق لمعلومات عن اهم المهن في التدريب المهني المانيا (اوسبيلدونغ) مشروحة باللغة العربية بالاضافة لمعلومات عن تعديل الشهادات والبراكتيكوم ومعلومات عامة لمساعدتك على ايجاد التدريب المناسب حمل التطبيق على الرابط:</string>
+
+    <!-- Home Cards -->
+    <string name="all_auses">قائمة كل المهن</string>
+    <string name="best_auses">المهن الأكثر شعبية</string>
+    <string name="best_salary">المهن الأعلى دخلاً</string>
+    <string name="cat_auses">المهن حسب التصنيف</string>
+    <string name="cat_auses_list">المهن في تصنيف</string>
+    <string name="general_info">معلومات عامة عن التدريب المهني</string>
+
+
+    <!-- Api Connecton-->
+    <string name="retrofit_success">تم التحميل بنجاح</string>
+    <string name="retrofit_failed">حدث خطأ غير معروف</string>
+
+    <!--  About layout-->
+    <string name="update_msg">هناك نسخة جديدة من هذا التطبيق يمكنك الحصول عليها بالضغط على زر \"تحديث\" وتحميل النسخة الجديدة من متجر جوجل:</string>
+
+    <!-- Ads -->
+    <string name="admob_publisher_id">pub-2100666789298664</string>
+    <string name="admob_app_id">ca-app-pub-2100666789298664~5492923778</string>
+    <string name="admob_banner_id">ca-app-pub-2100666789298664/1040696963</string>
+
+    <!-- test unit id
+    <string name="test_admob_banner_id">ca-app-pub-3940256099942544/6300978111</string>
+
+    -->
+
+    <!-- ActionBarDrawerToggle -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="restart">إعادة التشغيل</string>
+
+
+
+</resources>

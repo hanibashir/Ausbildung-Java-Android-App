@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "305405182776",
+    "firebase_url": "https://ausbildung-v2.firebaseio.com",
+    "project_id": "ausbildung-v2",
+    "storage_bucket": "ausbildung-v2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:305405182776:android:09c6e69db2a576de6ef7cd",
+        "android_client_info": {
+          "package_name": "me.hani.ausbildung"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "305405182776-adpt6e54nsk9nkaam18vqboeofe40ke3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "me.hani.ausbildung",
+            "certificate_hash": "8e73fa6c8da011b0783cae2323243edfea1c3b9d"
+          }
+        },
+        {
+          "client_id": "305405182776-fpnnpre4eedg8nqjf69249uc63fvhe3u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1nmskrqenO0dV34x2xY1q8PYnkFVEYd4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "305405182776-fpnnpre4eedg8nqjf69249uc63fvhe3u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
